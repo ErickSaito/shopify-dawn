@@ -1,0 +1,32 @@
+{
+  "name": "saito-dawn",
+  "version": "1.0.0",
+  "description": "[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
+  "main": "index.js",
+  "scripts": {
+    "login": "shopify login --store=pill-development-store.myshopify.com",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "start": "gulp build; shopify theme serve",
+    "build": "gulp build; shopify theme pull -l -o config/settings_data.json templates/*.json locales/*.json",
+    "deploy:dev": "npm run pre-deploy; shopify theme push -u -t"
+  },
+  "author": "Erick Saito",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "~7.19.1",
+    "@babel/preset-env": "~7.19.1",
+    "@shopify/babel-preset": "~24.1.5",
+    "eslint": "~8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "gulp": "~4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "~4.3.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "~5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "prettier": "2.7.1",
+    "sass": "~1.54.9"
+  }
+}

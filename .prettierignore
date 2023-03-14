@@ -1,0 +1,17 @@
+assets/*
+config/*
+layout/*
+locales/*
+node_modules/**/*
+sections/*
+snippets/*
+templates/*
+README.md
+release-notes.md
+translation.yml
+LICENSE.md
+.prettierrc.json
+.theme-check.yml
+package-lock.json
+package.json
+.vscode/*
